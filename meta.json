@@ -1,0 +1,15 @@
+{
+  "$schema": "https://dl.viam.dev/module.schema.json",
+  "module_id": "etorkos:occupied_state",
+  "visibility": "private",
+  "url": "https://github.com/etorkos/translation",
+  "description": "translates a person detection ML model to sensor binary value output",
+  "models": [
+    {
+      "api": "rdk:component:sensor",
+      "model": "etorkos:translation:occupied_state"
+    }
+  ],
+  "entrypoint": "run.sh",
+  "first_run": ""
+}
