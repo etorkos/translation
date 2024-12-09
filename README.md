@@ -3,13 +3,6 @@
 This module implements the [rdk sensor API](https://github.com/rdk/sensor-api) in a etorkos:translation:occupied_state model.
 With this model, you receive detections from a ML detection model and convert said detections into binary sensor output. You can find this model in the Viam Registry.
 
-## Requirements
-
-_Add instructions here for any requirements._
-
-``` bash
-```
-
 ## Build and Run
 
 To use this module, follow these instructions to [add a module from the Viam Registry](https://docs.viam.com/registry/configure/#add-a-modular-resource-from-the-viam-registry) and select the `rdk:sensor:etorkos:translation:occupied_state` model from the [`etorkos:translation:occupied_state` module](https://app.viam.com/module/rdk/etorkos:translation:occupied_state).
@@ -66,17 +59,10 @@ The following attributes are available for `rdk:sensor:etorkos:translation:occup
 
 ### Next Steps
 
-_Add any additional information you want readers to know and direct them towards what to do next with this module._
-_For example:_ 
+Todos: 
+- It shouldn't be necessary to have the detector name as and threshold as inputs if the service with those settings is a dependency. 
+- Investigate how to remove them.
 
-
-
-- To test your...
-- To write code against your...
-Todos: It shouldn't be necessary to have the detector name as and threshold as inputs if the service with those settings is a dependency. Investigate how to remove them.
-
-To see the 
 
 ## Troubleshooting
 
-_Add troubleshooting notes here._
