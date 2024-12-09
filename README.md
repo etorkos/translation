@@ -27,10 +27,17 @@ Enter a name for your sensor and click **Create**.
 On the new component panel, copy and paste the following attribute template into your sensor’s **Attributes** box:
 
 ```json
-{
-  TODO: INSERT SAMPLE ATTRIBUTES
-}
+  {
+    "confidence_threshold": 0.8,
+    "detector_name": "person_detection_service",
+    "vision_label": "person",
+    "camera_name": "camera-1"
+  }
 ```
+
+Notes: 
+For this service to work correctly you will need to set the "Depends on" field to the same as the detector name in the json above.
+To see readings populate you will need to enable the data capture service on the sensor.
 
 > [!NOTE]  
 > For more information, see [Configure a Robot](https://docs.viam.com/manage/configuration/).
@@ -41,15 +48,20 @@ The following attributes are available for `rdk:sensor:etorkos:translation:occup
 
 | Name | Type | Inclusion | Description |
 | ---- | ---- | --------- | ----------- |
-| `todo1` | string | **Required** |  TODO |
-| `todo2` | string | Optional |  TODO |
+| `camera_name` | string | **Required** |  The name of the camera supplying the video feed |
+| `confidence_threshold` | float | **Required** |  The threshold between 0 and 1 for which a matched image will successfully classify |
+| `detector_name` | string | **Required** |  The name of the ML detection service |
+| `vision_label` | string | **Required** |  The label that the detection service will match |
 
 ### Example Configuration
 
 ```json
-{
-  TODO: INSERT SAMPLE CONFIGURATION(S)
-}
+  {
+    "confidence_threshold": 0.8,
+    "detector_name": "person_detection_service_name",
+    "vision_label": "person",
+    "camera_name": "camera-1"
+  }
 ```
 
 ### Next Steps
@@ -57,8 +69,13 @@ The following attributes are available for `rdk:sensor:etorkos:translation:occup
 _Add any additional information you want readers to know and direct them towards what to do next with this module._
 _For example:_ 
 
+
+
 - To test your...
 - To write code against your...
+Todos: It shouldn't be necessary to have the detector name as and threshold as inputs if the service with those settings is a dependency. Investigate how to remove them.
+
+To see the 
 
 ## Troubleshooting
 
